@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="SparkOfLife">
+    <title>提取Windows聚焦图片（Spotlight） - SparkOfLife</title>
+    <meta name="author" content="Spark">
+    
+    
+    
+    <meta name="description" content="前言Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美震撼，值得大家收藏。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示： 路径：C:\Users\你的用户名\AppData\Local\Packages\Microsoft.Wi">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="提取Windows聚焦图片（Spotlight）">
+<meta property="og:url" content="http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/index.html">
+<meta property="og:site_name" content="SparkOfLife">
+<meta property="og:description" content="前言Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美震撼，值得大家收藏。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示： 路径：C:\Users\你的用户名\AppData\Local\Packages\Microsoft.Wi">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd2uyrwjej212p0mgk0w.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd35spo1pj212p0mgtc2.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkgg6i1qvej20wn0sgaao.jpg">
+<meta property="og:updated_time" content="2017-10-13T03:17:30.384Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="提取Windows聚焦图片（Spotlight）">
+<meta name="twitter:description" content="前言Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美震撼，值得大家收藏。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示： 路径：C:\Users\你的用户名\AppData\Local\Packages\Microsoft.Wi">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-sxklfps8ywgfyyjcowvnb4gxdgt0zjts3hsguljmv9uqanxjbnitrovtbrek.min.css">
+    <!--STYLES END-->
+    
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">SparkOfLife</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            提取Windows聚焦图片（Spotlight）
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-10-12T12:26:20+08:00">
+	
+		    Oct 12, 2017
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美震撼，值得大家收藏。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg" alt="C:\Users\用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets" title="C:\Users\用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets"><br>路径：<em>C:\Users\你的用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets</em></p>
+<p>如果你喜欢一张Windows聚焦中的壁纸，需要将所有壁纸都加上后缀名才能找到你想要的那张壁纸，效率太低。我们可以利用Windows自带的PowerShell功能自动将这些图片加上后缀并保存在”图片”文件夹中。</p>
+<p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd2uyrwjej212p0mgk0w.jpg" alt=""></p>
+<h2 id="仅保存Windows聚焦图片"><a href="#仅保存Windows聚焦图片" class="headerlink" title="仅保存Windows聚焦图片"></a>仅保存Windows聚焦图片</h2><p>代码如下<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将复制出来的缓存图片保存在下面的文件夹  </span></div><div class="line"><span class="built_in">add-type</span> -AssemblyName System.Drawing  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Vertical"</span> -ItemType directory -Force;  </div><div class="line"> </div><div class="line"><span class="comment"># 将横竖图片分别复制到对应的两个文件夹  </span></div><div class="line"><span class="keyword">foreach</span>(<span class="variable">$file</span> <span class="keyword">in</span> (<span class="built_in">Get-Item</span> <span class="string">"$(<span class="variable">$env:LOCALAPPDATA</span>)\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\*"</span>))  </div><div class="line">&#123;  </div><div class="line">    <span class="keyword">if</span> ((<span class="built_in">Get-Item</span> <span class="variable">$file</span>).length <span class="nomarkup">-lt</span> <span class="number">100</span>kb) &#123; <span class="keyword">continue</span> &#125;  </div><div class="line">    <span class="built_in">Copy-Item</span> <span class="variable">$file</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\$(<span class="variable">$file</span>.Name).jpg"</span>;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="keyword">foreach</span>(<span class="variable">$newfile</span> <span class="keyword">in</span> (<span class="built_in">Get-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\*"</span>))  </div><div class="line">&#123;  </div><div class="line">    <span class="variable">$image</span> = <span class="built_in">New-Object</span> -comObject WIA.ImageFile;  </div><div class="line">    <span class="variable">$image</span>.LoadFile(<span class="variable">$newfile</span>.FullName);  </div><div class="line">    <span class="keyword">if</span>(<span class="variable">$image</span>.Width.ToString() <span class="nomarkup">-eq</span> <span class="string">"1920"</span>)&#123; <span class="built_in">Move-Item</span> <span class="variable">$newfile</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal"</span> -Force; &#125;  </div><div class="line">    <span class="keyword">elseif</span>(<span class="variable">$image</span>.Width.ToString() <span class="nomarkup">-eq</span> <span class="string">"1080"</span>)&#123; <span class="built_in">Move-Item</span> <span class="variable">$newfile</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Vertical"</span> -Force; &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>新建一个文本文档，将上述代码粘贴进去，保存后缀为<code>.ps1</code>，命名为<code>GetWallPaperFromSpotlight.ps1</code>，然后右键”使用PowerShell运行”就可以发现所有聚焦图片被保存在你自己的用户图片文件夹下的Spotlight文件夹中。</p>
+<p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd35spo1pj212p0mgtc2.jpg" alt=""></p>
+<h2 id="保存并设为Windows桌面壁纸"><a href="#保存并设为Windows桌面壁纸" class="headerlink" title="保存并设为Windows桌面壁纸"></a>保存并设为Windows桌面壁纸</h2><p>代码如下<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将复制出来的缓存图片保存在下面的文件夹  </span></div><div class="line"><span class="built_in">add-type</span> -AssemblyName System.Drawing  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Vertical"</span> -ItemType directory -Force;  </div><div class="line"> </div><div class="line"><span class="comment"># 将横竖图片分别复制到对应的两个文件夹  </span></div><div class="line"><span class="keyword">foreach</span>(<span class="variable">$file</span> <span class="keyword">in</span> (<span class="built_in">Get-Item</span> <span class="string">"$(<span class="variable">$env:LOCALAPPDATA</span>)\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\*"</span>))  </div><div class="line">&#123;  </div><div class="line">    <span class="keyword">if</span> ((<span class="built_in">Get-Item</span> <span class="variable">$file</span>).length <span class="nomarkup">-lt</span> <span class="number">100</span>kb) &#123; <span class="keyword">continue</span> &#125;  </div><div class="line">    <span class="built_in">Copy-Item</span> <span class="variable">$file</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\$(<span class="variable">$file</span>.Name).jpg"</span>;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="keyword">foreach</span>(<span class="variable">$newfile</span> <span class="keyword">in</span> (<span class="built_in">Get-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\*"</span>))  </div><div class="line">&#123;  </div><div class="line">    <span class="variable">$image</span> = <span class="built_in">New-Object</span> -comObject WIA.ImageFile;  </div><div class="line">    <span class="variable">$image</span>.LoadFile(<span class="variable">$newfile</span>.FullName);  </div><div class="line">    <span class="keyword">if</span>(<span class="variable">$image</span>.Width.ToString() <span class="nomarkup">-eq</span> <span class="string">"1920"</span>)&#123; <span class="built_in">Move-Item</span> <span class="variable">$newfile</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal"</span> -Force; &#125;  </div><div class="line">    <span class="keyword">elseif</span>(<span class="variable">$image</span>.Width.ToString() <span class="nomarkup">-eq</span> <span class="string">"1080"</span>)&#123; <span class="built_in">Move-Item</span> <span class="variable">$newfile</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Vertical"</span> -Force; &#125;  </div><div class="line">&#125;  </div><div class="line"> </div><div class="line"><span class="comment"># 壁纸设置函数  </span></div><div class="line"><span class="keyword">function</span> Set-Wallpaper  </div><div class="line">&#123;  </div><div class="line">    <span class="keyword">param</span>(  </div><div class="line">        [Parameter(Mandatory=<span class="literal">$true</span>)]  </div><div class="line">        <span class="variable">$Path</span>,  </div><div class="line">   </div><div class="line">        [ValidateSet(<span class="string">'Center'</span>, <span class="string">'Stretch'</span>)]  </div><div class="line">        <span class="variable">$Style</span> = <span class="string">'Center'</span>  </div><div class="line">    )  </div><div class="line">   </div><div class="line">    <span class="built_in">Add-Type</span> <span class="string">@"  </span></div><div class="line"><span class="string">using System;  </span></div><div class="line"><span class="string">using System.Runtime.InteropServices;  </span></div><div class="line"><span class="string">using Microsoft.Win32;  </span></div><div class="line"><span class="string">namespace Wallpaper  </span></div><div class="line"><span class="string">&#123;  </span></div><div class="line"><span class="string">public enum Style : int  </span></div><div class="line"><span class="string">&#123;  </span></div><div class="line"><span class="string">Center, Stretch  </span></div><div class="line"><span class="string">&#125;  </span></div><div class="line"><span class="string">public class Setter &#123;  </span></div><div class="line"><span class="string">public const int SetDesktopWallpaper = 20;  </span></div><div class="line"><span class="string">public const int UpdateIniFile = 0x01;  </span></div><div class="line"><span class="string">public const int SendWinIniChange = 0x02;  </span></div><div class="line"><span class="string">[DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]  </span></div><div class="line"><span class="string">private static extern int SystemParametersInfo (int uAction, int uParam, string lpvParam, int fuWinIni);  </span></div><div class="line"><span class="string">public static void SetWallpaper ( string path, Wallpaper.Style style ) &#123;  </span></div><div class="line"><span class="string">SystemParametersInfo( SetDesktopWallpaper, 0, path, UpdateIniFile | SendWinIniChange );  </span></div><div class="line"><span class="string">RegistryKey key = Registry.CurrentUser.OpenSubKey("Control Panel\\Desktop", true);  </span></div><div class="line"><span class="string">switch( style )  </span></div><div class="line"><span class="string">&#123;  </span></div><div class="line"><span class="string">case Style.Stretch :  </span></div><div class="line"><span class="string">key.SetValue(@"WallpaperStyle", "2") ;  </span></div><div class="line"><span class="string">key.SetValue(@"TileWallpaper", "0") ;  </span></div><div class="line"><span class="string">break;  </span></div><div class="line"><span class="string">case Style.Center :  </span></div><div class="line"><span class="string">key.SetValue(@"WallpaperStyle", "1") ;  </span></div><div class="line"><span class="string">key.SetValue(@"TileWallpaper", "0") ;  </span></div><div class="line"><span class="string">break;  </span></div><div class="line"><span class="string">&#125;  </span></div><div class="line"><span class="string">key.Close();  </span></div><div class="line"><span class="string">&#125;  </span></div><div class="line"><span class="string">&#125;  </span></div><div class="line"><span class="string">&#125;  </span></div><div class="line"><span class="string">"@</span>  </div><div class="line">   </div><div class="line">    [Wallpaper.Setter]::SetWallpaper( <span class="variable">$Path</span>, <span class="variable">$Style</span> )  </div><div class="line">&#125;  </div><div class="line">   </div><div class="line">  </div><div class="line"><span class="variable">$filePath</span> = <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal\*"</span>  </div><div class="line"><span class="variable">$file</span> = <span class="built_in">Get-Item</span> -Path <span class="variable">$filePath</span> | <span class="built_in">Sort-Object</span> -Property LastWriteTime -Descending | <span class="built_in">Select-Object</span> -First <span class="number">1</span>  </div><div class="line">Set-Wallpaper -Path <span class="variable">$file</span>.FullName    </div><div class="line"><span class="comment"># echo $file.FullName  </span></div><div class="line">  </div><div class="line"><span class="built_in">Remove-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\*"</span>;  </div><div class="line"><span class="comment">#pause</span></div></pre></td></tr></table></figure></p>
+<p>同样地，新建一个文本文档，将上述代码粘贴进去，保存后缀为<code>.ps1</code>，命名为<code>SetWallPaperFromSpotlight.ps1</code>，然后右键”使用PowerShell运行”就可以看到桌面背景已经被换成了Windows聚焦图片。</p>
+<h2 id="每天自动提取并设置为Windows桌面壁纸"><a href="#每天自动提取并设置为Windows桌面壁纸" class="headerlink" title="每天自动提取并设置为Windows桌面壁纸"></a>每天自动提取并设置为Windows桌面壁纸</h2><p>利用Windows自带的任务计划程序和上面的的PowerShell脚本就可以实现。由于有些Windows聚焦图片我不是很喜欢，所以我不想自动更换壁纸。因此这一部分我并没有尝试实现。感兴趣的同学可以参考<a href="http://blog.csdn.net/anymake_ren/article/details/51125609" target="_blank" rel="external">这篇文章</a>。</p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>如果出现如图所示的提醒不用理会，请关闭再重新”使用PowerShell运行”</p>
+<p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkgg6i1qvej20wn0sgaao.jpg" alt=""></p>
+<p><br><br><br><br><br><br>参考：<a href="http://blog.csdn.net/anymake_ren/article/details/51125609" target="_blank" rel="external">http://blog.csdn.net/anymake_ren/article/details/51125609</a></p>
+
+            
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/" data-tooltip="安装插件，更优雅地使用Sublime Text 3 书写Markdown">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 Spark. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/" data-tooltip="安装插件，更优雅地使用Sublime Text 3 书写Markdown">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                    <i class="fa fa-google-plus"></i><span>Share on Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">Spark</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/10/10/Sublime-Text-3安装Package-Control插件/">
+                            <h3 class="media-heading">Sublime Text 3安装Package Control插件</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 10, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/">
+                            <h3 class="media-heading">安装插件，更优雅地使用Sublime Text 3 书写Markdown</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 10, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/">
+                            <h3 class="media-heading">提取Windows聚焦图片（Spotlight）</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 12, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                3 posts found
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+
+
+    </body>
+</html>
