@@ -22,6 +22,8 @@
         
     
     
+        <meta property="og:image" content="http://yoursite.com/assets/images/spark.jpg"/>
+    
     
     
     
@@ -38,6 +40,10 @@
 
 
     
+        
+            
+        
+    
 
 <header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
@@ -50,6 +56,8 @@
                 href="#about">
         
         
+            <img class="header-picture" src="/assets/images/spark.jpg" alt="Bild des Autors"/>
+        
         </a>
     
 </header>
@@ -57,8 +65,23 @@
             <!-- Define author's picture -->
 
 
+
+        
+    
+
 <nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/spark.jpg" alt="Bild des Autors"/>
+                </a>
+                <h4 class="sidebar-profile-name">Spark</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
         
         
             <ul class="sidebar-buttons">
@@ -83,7 +106,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                        <span class="sidebar-button-desc">Categories</span>
+                        <span class="sidebar-button-desc">Kategorien</span>
                     </a>
             </li>
             
@@ -107,7 +130,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                        <span class="sidebar-button-desc">Archives</span>
+                        <span class="sidebar-button-desc">Archiv</span>
                     </a>
             </li>
             
@@ -119,7 +142,7 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-search"></i>
-                        <span class="sidebar-button-desc">Search</span>
+                        <span class="sidebar-button-desc">Suche</span>
                     </a>
             </li>
             
@@ -131,13 +154,22 @@
                         >
                     
                         <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-                        <span class="sidebar-button-desc">About</span>
+                        <span class="sidebar-button-desc">Über</span>
                     </a>
             </li>
             
         </ul>
         
             <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/SparkOfLife" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
             
         </ul>
         
@@ -182,7 +214,7 @@
                 <div class="postShorten-meta">
     <time itemprop="datePublished" datetime="2017-10-12T12:26:20+08:00">
 	
-		    Oct 12, 2017
+		    12 Oct 2017
     	
     </time>
     
@@ -211,7 +243,7 @@
                     
                         <p>
                             <a href="/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
+                                Kommentieren und teilen
                             </a>
                         </p>
                     
@@ -236,7 +268,7 @@
                 <div class="postShorten-meta">
     <time itemprop="datePublished" datetime="2017-10-10T22:47:34+08:00">
 	
-		    Oct 10, 2017
+		    10 Oct 2017
     	
     </time>
     
@@ -340,7 +372,7 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
                     
                         <p>
                             <a href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
+                                Kommentieren und teilen
                             </a>
                         </p>
                     
@@ -365,7 +397,7 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
                 <div class="postShorten-meta">
     <time itemprop="datePublished" datetime="2017-10-10T21:47:41+08:00">
 	
-		    Oct 10, 2017
+		    10 Oct 2017
     	
     </time>
     
@@ -409,7 +441,7 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
                     
                         <p>
                             <a href="/2017/10/10/Sublime-Text-3安装Package-Control插件/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
+                                Kommentieren und teilen
                             </a>
                         </p>
                     
@@ -423,7 +455,7 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
     <ul class="pagination">
         
         
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="pagination-number">Seite 1 von 1</li>
     </ul>
 </div>
 
@@ -442,11 +474,17 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
         
 
 
+    
+        
+    
+
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
             <i class="fa fa-remove"></i>
         </div>
+        
+            <img id="about-card-picture" src="/assets/images/spark.jpg" alt="Bild des Autors"/>
         
             <h4 id="about-card-name">Spark</h4>
         
@@ -481,7 +519,7 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="no-result text-color-light text-center">keinen Beitrag gefunden</div>
             <div class="results">
                 
                 <div class="media">
@@ -545,10 +583,10 @@ GFM切换方法：点击Sublime Text右下角的`Markdown`,然后按图所示操
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="no post found"
-                data-message-one="1 post found"
-                data-message-other="{n} posts found">
-                3 posts found
+                data-message-zero="keinen Beitrag gefunden"
+                data-message-one="1 Beitrag gefunden"
+                data-message-other="{n} Einträge gefunden">
+                3 Einträge gefunden
             </p>
         </div>
     </div>
