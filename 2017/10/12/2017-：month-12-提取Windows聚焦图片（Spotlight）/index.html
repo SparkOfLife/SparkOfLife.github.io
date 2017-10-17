@@ -11,22 +11,22 @@
     
     
     
-    <meta name="description" content="Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美，让人感到震撼。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：">
+    <meta name="description" content="提取Windows聚焦图片并自动设为壁纸">
 <meta name="keywords" content="Windows,PowerShell,聚焦图片,Spotlight">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="提取Windows聚焦图片（Spotlight）">
 <meta property="og:url" content="https://sparkoflife.github.io/2017/10/12/2017-：month-12-提取Windows聚焦图片（Spotlight）/index.html">
 <meta property="og:site_name" content="SparkOfLife">
-<meta property="og:description" content="Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美，让人感到震撼。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：">
+<meta property="og:description" content="提取Windows聚焦图片并自动设为壁纸">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd2uyrwjej212p0mgk0w.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd35spo1pj212p0mgtc2.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkgg6i1qvej20wn0sgaao.jpg">
-<meta property="og:updated_time" content="2017-10-16T04:01:38.573Z">
+<meta property="og:updated_time" content="2017-10-17T02:32:28.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="提取Windows聚焦图片（Spotlight）">
-<meta name="twitter:description" content="Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美，让人感到震撼。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：">
+<meta name="twitter:description" content="提取Windows聚焦图片并自动设为壁纸">
 <meta name="twitter:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg">
     
     
@@ -261,7 +261,9 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美，让人感到震撼。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：<br><a id="more"></a><br><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg" alt="C:\Users\用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets" title="C:\Users\用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets"><br>路径：<em>C:\Users\你的用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets</em></p>
+            <!-- excerpt --></p>
+<p>Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美，让人感到震撼。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd1g5wf7jj212o0mge66.jpg" alt="C:\Users\用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets" title="C:\Users\用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets"><br>路径：<em>C:\Users\你的用户名\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets</em></p>
 <p>如果你在锁屏界面看到一张壁纸，你很喜欢，想保存下来，那么你需要在上面所说的文件夹中将所有文件都加上后缀名才能找到你想要的那张壁纸，效率太低。那么怎样才能解决这个问题呢？我们可以利用Windows自带的PowerShell功能自动将这些图片加上后缀并保存在<code>图片</code>文件夹中。</p>
 <p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkd2uyrwjej212p0mgk0w.jpg" alt=""></p>
 <h2 id="仅保存Windows聚焦图片"><a href="#仅保存Windows聚焦图片" class="headerlink" title="仅保存Windows聚焦图片"></a>仅保存Windows聚焦图片</h2><p>代码如下<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将复制出来的缓存图片保存在下面的文件夹  </span></div><div class="line"><span class="built_in">add-type</span> -AssemblyName System.Drawing  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal"</span> -ItemType directory -Force;  </div><div class="line"><span class="built_in">New-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Vertical"</span> -ItemType directory -Force;  </div><div class="line"> </div><div class="line"><span class="comment"># 将横竖图片分别复制到对应的两个文件夹  </span></div><div class="line"><span class="keyword">foreach</span>(<span class="variable">$file</span> <span class="keyword">in</span> (<span class="built_in">Get-Item</span> <span class="string">"$(<span class="variable">$env:LOCALAPPDATA</span>)\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\*"</span>))  </div><div class="line">&#123;  </div><div class="line">    <span class="keyword">if</span> ((<span class="built_in">Get-Item</span> <span class="variable">$file</span>).length <span class="nomarkup">-lt</span> <span class="number">100</span>kb) &#123; <span class="keyword">continue</span> &#125;  </div><div class="line">    <span class="built_in">Copy-Item</span> <span class="variable">$file</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\$(<span class="variable">$file</span>.Name).jpg"</span>;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="keyword">foreach</span>(<span class="variable">$newfile</span> <span class="keyword">in</span> (<span class="built_in">Get-Item</span> <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\CopyAssets\*"</span>))  </div><div class="line">&#123;  </div><div class="line">    <span class="variable">$image</span> = <span class="built_in">New-Object</span> -comObject WIA.ImageFile;  </div><div class="line">    <span class="variable">$image</span>.LoadFile(<span class="variable">$newfile</span>.FullName);  </div><div class="line">    <span class="keyword">if</span>(<span class="variable">$image</span>.Width.ToString() <span class="nomarkup">-eq</span> <span class="string">"1920"</span>)&#123; <span class="built_in">Move-Item</span> <span class="variable">$newfile</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Horizontal"</span> -Force; &#125;  </div><div class="line">    <span class="keyword">elseif</span>(<span class="variable">$image</span>.Width.ToString() <span class="nomarkup">-eq</span> <span class="string">"1080"</span>)&#123; <span class="built_in">Move-Item</span> <span class="variable">$newfile</span>.FullName <span class="string">"$(<span class="variable">$env:USERPROFILE</span>)\Pictures\Spotlight\Vertical"</span> -Force; &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -273,7 +275,6 @@
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>如果出现如图所示的提醒不用理会，请关闭再重新”使用PowerShell运行”</p>
 <p><img src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkgg6i1qvej20wn0sgaao.jpg" alt=""></p>
 <p><br><br><br><br><br><br>参考：<a href="http://blog.csdn.net/anymake_ren/article/details/51125609" target="_blank" rel="external">http://blog.csdn.net/anymake_ren/article/details/51125609</a></p>
-
             
         </div>
     </div>
@@ -300,7 +301,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/" data-tooltip="安装插件，更优雅地使用Sublime Text 3 书写Markdown">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/" data-tooltip="使用Sublime Text 3 写Markdown">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -406,7 +407,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/" data-tooltip="安装插件，更优雅地使用Sublime Text 3 书写Markdown">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/" data-tooltip="使用Sublime Text 3 写Markdown">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -625,7 +626,7 @@
                     
                     <div class="media-body">
                         <a class="link-unstyled" href="https://sparkoflife.github.io/2017/10/10/安装插件，更优雅地使用Sublime-Text-3-书写Markdown/">
-                            <h3 class="media-heading">安装插件，更优雅地使用Sublime Text 3 书写Markdown</h3>
+                            <h3 class="media-heading">使用Sublime Text 3 写Markdown</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
@@ -634,7 +635,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Sublime Test 3是一款强大的代码编辑器，支持多种编程语言。其拥有漂亮的用户界面和强大的插件扩展功能。最近想用Markdown标记语言练习下写blog，Sublime Text也支持Markdown标记语言，遂用之。工欲善其事,必先利其器。为了更加高效舒服地写Markdown，我们需要安装两个插件：MarkdownEditing和OmniMarkupPreviewer。<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>安装插件，更优雅地使用Sublime Text 3 书写Markdown<br></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -659,7 +660,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Windows聚焦(Windows Spotlight)是Windows 10里边新增的一个锁屏壁纸功能，它会自动下载并随机更换锁屏壁纸。Windows聚焦中壁纸往往非常精美，让人感到震撼。可这些壁纸都放在你电脑上的缓存文件夹中并且没有后缀名，需加上”.jpg”才能预览。如下图所示：<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>提取Windows聚焦图片并自动设为壁纸<br></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
