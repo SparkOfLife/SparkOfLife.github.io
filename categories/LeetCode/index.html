@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="SparkOfLife">
-    <title>分类: 想法 - SparkOfLife</title>
+    <title>分类: LeetCode - SparkOfLife</title>
     <meta name="author" content="Spark">
     
     
     
     <meta property="og:type" content="blog">
 <meta property="og:title" content="SparkOfLife">
-<meta property="og:url" content="https://sparkoflife.github.io/categories/想法/index.html">
+<meta property="og:url" content="https://sparkoflife.github.io/categories/LeetCode/index.html">
 <meta property="og:site_name" content="SparkOfLife">
 <meta property="og:locale" content="zh-cn">
 <meta name="twitter:card" content="summary">
@@ -208,27 +208,27 @@
     <section class="postShorten-group main-content-wrap">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2017/10/15/一切就这样开始/">
-                            一切就这样开始
+                        <a class="link-unstyled" href="/2017/10/17/LeetCode-1-Two-Sum/">
+                            LeetCode 1 Two Sum
                         </a>
                     
                 </h1>
                 <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-10-15T18:04:28+08:00">
+    <time itemprop="datePublished" datetime="2017-10-17T21:09:02+08:00">
 	
-		    10月 15, 2017
+		    10月 17, 2017
     	
     </time>
     
         <span>发布在 </span>
         
-    <a class="category-link" href="/categories/想法/">想法</a>
+    <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
 
 
     
@@ -236,21 +236,41 @@
 
             </div>
             
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <p>是的，我开始写博客了。<br>
+                <div class="postShorten-content" itemprop="articleBody">
+                    LeetCode 1 Two Sum题解<br><!-- expert -->
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><h3 id="题目如下："><a href="#题目如下：" class="headerlink" title="题目如下："></a>题目如下：</h3><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p><a href="https://leetcode.com/problems/two-sum/description/" target="_blank" rel="external">原题链接</a></p>
+<p>即给出一个数组，找到和为target的两个数字的位置。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>暴力求解复杂度是O(n^2),数组很大时，会LTE。</p>
+<p>在python中可以用dict来记录出现的数（key值为数值，value为数组下标），只要判断有没有和当前的数凑成 target 的数，再找出来就行。由于从python字典中取值，其时间复杂度为O(1)，因此这种算法的时间复杂度为O(n)，成功AC。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>Python3代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line"><span class="string">        :type nums: List[int]</span></div><div class="line"><span class="string">        :type target: int</span></div><div class="line"><span class="string">        :rtype: List[int]</span></div><div class="line"><span class="string">        """</span></div><div class="line">        dict = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</div><div class="line">            <span class="keyword">if</span> target - nums[i] <span class="keyword">in</span> dict:</div><div class="line">                <span class="keyword">return</span> [dict[target - nums[i]], i]</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                dict[nums[i]] = i</div></pre></td></tr></table></figure>
+<p>C++代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; result;</div><div class="line">        </div><div class="line">        <span class="comment">//法一</span></div><div class="line">        <span class="comment">// for(int i=0; i&lt;nums.size(); i++)&#123;</span></div><div class="line">        <span class="comment">//     for(int j=i+1; j&lt;nums.size(); j++)&#123;</span></div><div class="line">        <span class="comment">//         if(nums[i] + nums[j] == target) &#123;</span></div><div class="line">        <span class="comment">//             result.push_back(i);</span></div><div class="line">        <span class="comment">//             result.push_back(j);</span></div><div class="line">        <span class="comment">//             return result;</span></div><div class="line">        <span class="comment">//         &#125; </span></div><div class="line">        <span class="comment">//     &#125;</span></div><div class="line">        <span class="comment">// &#125;</span></div><div class="line">        </div><div class="line">        <span class="comment">//法二</span></div><div class="line">        <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; hash;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.size(); i++)&#123;</div><div class="line">            hash[nums[i]] = i;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.size(); i++)&#123;</div><div class="line">            <span class="keyword">int</span> diff = target - nums[i];</div><div class="line">            <span class="keyword">if</span>(hash.find(diff) != hash.end() &amp;&amp; hash[diff] &gt; i)&#123;</div><div class="line">                result.push_back(i);</div><div class="line">                result.push_back(hash[diff]);</div><div class="line">                <span class="keyword">return</span> result;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><br><br><br><br><br><br><br><br><br></p>
+<p>参考：</p>
+<p><a href="http://blog.csdn.net/u010366748/article/details/51469937" target="_blank" rel="external">Python内置方法的时间复杂度</a></p>
+<p><a href="http://www.cnblogs.com/heshangaichirou/p/5432728.html" target="_blank" rel="external">python 字典有序无序及查找效率，hash表</a></p>
+<p><a href="http://blog.csdn.net/zolalad/article/details/11848739" target="_blank" rel="external">算法的时间复杂度和空间复杂度-总结</a></p>
+
                     
-                        <a href="/2017/10/15/一切就这样开始/" class="postShorten-excerpt_link link">
-                            阅读全文
-                        </a>
                         
+                    
+                    
+                        <p>
+                            <a href="/2017/10/17/LeetCode-1-Two-Sum/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
                     
                 </div>
             
         </div>
         
-            <a href="/2017/10/15/一切就这样开始/">
+            <a href="/2017/10/17/LeetCode-1-Two-Sum/">
                 <div class="postShorten-thumbnailimg">
-                    <img alt="" itemprop="image" src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkj20jvixgj21hc0u0n76.jpg"/>
+                    <img alt="" itemprop="image" src="http://ww1.sinaimg.cn/large/81eff9f9ly1fkljpabazej20dc08wq7p.jpg"/>
                 </div>
             </a>
             
