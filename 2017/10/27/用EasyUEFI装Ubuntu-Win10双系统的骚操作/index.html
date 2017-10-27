@@ -20,7 +20,7 @@
 <meta property="og:description" content="这操作不太常见，但好用！">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkx8lud7h4j20ob0giglx.jpg">
-<meta property="og:updated_time" content="2017-10-27T08:24:07.184Z">
+<meta property="og:updated_time" content="2017-10-27T17:41:19.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用EasyUEFI装Ubuntu+Win10双系统的骚操作">
 <meta name="twitter:description" content="这操作不太常见，但好用！">
@@ -36,6 +36,9 @@
         <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkx9j6gvnhj20lo0mfwff.jpg"/>
         <meta class="swiftype" name="image" data-type="enum" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkx9j6gvnhj20lo0mfwff.jpg" />
     
+    
+        <meta property="og:image" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkxpqaowdkj20sg0lcmzb.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://ww1.sinaimg.cn/large/81eff9f9ly1fkxpqaowdkj20sg0lcmzb.jpg" />
     
     
     <!--STYLES-->
@@ -210,9 +213,17 @@
 </nav>
 
             
+        <div class="post-header-cover
+                    text-center
+                    post-header-cover--full"
+             style="background-image:url('http://ww1.sinaimg.cn/large/81eff9f9ly1fkxpqaowdkj20sg0lcmzb.jpg');"
+             data-behavior="4">
+            
+        </div>
+
             <div id="main" data-behavior="4"
-                 class="
-                        hasCoverMetaIn
+                 class="hasCover
+                        hasCoverMetaOut
                         ">
                 
 <article class="post" itemscope itemType="http://schema.org/BlogPosting">
@@ -246,7 +257,7 @@
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <!-- excerpt -->
-<p>大三暑假尝试过装双系统，就按照网上的教程来弄。前面一切顺利，可引导的时候总是出问题，最后以失败告终。今天兴起，于是又进行了一次随意的尝试，结果成功了，喜出望外。趁着记忆还热乎，写下此文。</p>
+<p>大三暑假尝试过装双系统，就按照网上的教程来弄（吐槽一句，那些老旧教程就不要看了，已经过时了，都是坑）。前面一切顺利，可引导的时候总是出问题，最后以失败告终。今天兴起，于是又进行了一次随意的尝试，结果成功了，喜出望外。趁着记忆还热乎，写下此文。</p>
 <p><strong>本次安装过程主要参考: <a href="http://www.miui.com/forum.php?mod=viewthread&amp;tid=7875864&amp;extra=page=3&amp;mobile=2" target="_blank" rel="external">用 EasyUEFI 在 Win8/10 中硬盘安装 Ubuntu16.04图文教程</a></strong><br><em>在下文中简称“教程”</em></p>
 <p>这篇文章中图文都很详细，大家可以参考，我不再赘述。在这里我只讲一些我的安装过程与教程的差异。</p>
 <ol>
@@ -260,6 +271,7 @@
 <li>分区结束后点击<code>现在安装</code>会弹出提示“xx将安装在xx”点击<code>继续</code>.</li>
 <li>安装成功后改变默认的启动顺序，参考<a href="https://jingyan.baidu.com/article/f71d60379e16021ab641d1ab.html" target="_blank" rel="external">百度经验</a></li>
 <li>在Ubuntu中可以访问Win中的C盘、D盘、F盘等。但如果开启Win10的<code>快速启动</code>则不能访问。</li>
+<li>安装完双系统后，你会发现在Windows系统下显示的时间要比实际时间快8个小时，解决办法：<a href="https://jingyan.baidu.com/article/154b46317b25ca28ca8f41e8.html" target="_blank" rel="external">Win/Lin 双系统时间错误的调整</a></li>
 </ol>
             
         </div>
