@@ -57,7 +57,7 @@ img {
 }
     #footer {
     background-color:white;
-    color:grey;
+    color:black;
     clear:both;
     text-align:center;
 	font-family: arial, sans-serif;
@@ -68,27 +68,36 @@ img {
 }
 </style>
 <script type="text/javascript">
-	function autoInput(searchId, inputId)
-	{
-        // alert('autoInput')
-        document.getElementById(inputId).value=
-        document.getElementById('search_field').value;
-        document.getElementById(searchId).submit();
-    }
-    function formSubmit()
+    function mainSearch()
     {
-    	document.getElementById('baiduInput').value=
-    	document.getElementById('search_field').value;
-    	document.getElementById('googleInput').value=
-    	document.getElementById('search_field').value;
-    	baiduSearch.submit();
-    	setTimeout("f.submit();",1);
+    	var searchContent = searchForm.content.value;
+    	baiduURL='https://www.baidu.com/s?wd='+searchContent;
+    	googleURL = 'https://www.google.com/search?q='+searchContent;
+    	window.open(baiduURL);
+    	window.open(googleURL);
     }
-    function enterSearch(event)
+    // 检测回车并搜索
+    function enterSearch(event)   
     {
     	if (event.keyCode == 13) {
-    		formSubmit();
+    		var searchContent = searchForm.content.value;
+    		baiduURL='https://www.baidu.com/s?wd='+searchContent;
+    		googleURL = 'https://www.google.com/search?q='+searchContent;
+    		window.open(baiduURL);
+    		window.open(googleURL);
     	}
+    }
+    function googleSearch()
+    {
+    	var searchContent = searchForm.content.value;
+    	googleURL = 'https://www.google.com/search?q='+searchContent;
+    	window.open(googleURL);
+    }
+    function baiduSearch()
+    {
+    	var searchContent = searchForm.content.value;
+    	baiduURL='https://www.baidu.com/s?wd='+searchContent;
+    	window.open(baiduURL);
     }
 </script>
 </head>
@@ -100,45 +109,36 @@ img {
 			<table border="0" align="center">
 				<tr>
 					<td colspan = 2 align="center">
-                        <img src="/assets/images/googleDragon.JPG" width="636" alt="谷歌百度联合搜索">
+                        <img src="/assets/images/logo.jpg" width="636" alt="谷歌百度联合搜索">
 					</td>
 				</tr>
 				<tr>
 					<td colspan = 2>
-						<form action="http://www.baidu.com/baidu" target="_blank" name="form1" method="get">
-							<input type="text" name="word" class='search_field' id="search_field" maxLength=256   size=55  onkeypress="enterSearch(event)"> 
+						<form name="searchForm" target="nm_iframe">
+							<input type="text" name="content" class='search_field' id="search_field" maxLength=256   size=55  onkeypress="enterSearch(event)"> 
 							<script>   
-								document.form1.word.focus();   
+								document.searchForm.content.focus();   
 							</script>
-							<input type="button" name="search" class="button"  value="联合搜索" onclick="formSubmit()">
+							<input type="button" name="search" class="button"  value="联合搜索" onclick="mainSearch()"> <!-- 提交表单后不跳转 -->
 						</form>
+						<iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
 					</td>
 				</tr>
 				<tr>
-					<form action="http://www.google.com/search"   name=f id = "googleSearch" target="_blank" align = "center">
-						<input   name=q   value="" id="googleInput" type=hidden>
-						<input   type=hidden   name=ie   value="UTF-8">
-						<input   type=hidden   name=oe   value="UTF-8">
-						<input   name=hl   type=hidden   value=en >
 						<td align="right">
-							<input  type="submit" value="谷歌搜索" name=btnG class="button" onclick="autoInput('googleSearch','googleInput')">
+							<input  type="submit" value="谷歌搜索" name=btnG class="button" onclick="googleSearch()">
 						</td>
-					</form>
-					<form action="http://www.baidu.com/baidu" target="_blank" name="baiduSearch" id="baiduSearch">
-						<input name=tn type=hidden value=baidu >
-						<input type=hidden name=word maxLength=256  size=55 id = "baiduInput">
 						<td align="left">
-							<input type="submit" value="百度搜索" class="button" onclick="autoInput('baiduSearch','baiduInput')">
-						</td>
-					</form>
+							<input type="submit" value="百度搜索" class="button" onclick="baiduSearch()">
 
+						</td>
 				</tr>
 			</table> 
 		</div>
 	</div>
 	</div>
 	<div id="footer">
-		注意：请使用chrome浏览器，并设置允许本页面弹出窗口
+		注意：请设置允许本页面弹出窗口
 	</div>
 </body>
 </html>
